@@ -32,9 +32,9 @@
 %% @end
 %%--------------------------------------------------------------------
 init() ->
-    Dir = case code:priv_dir(bcrypt) of
+    Dir = case code:priv_dir(erlbcrypt) of
               {error, bad_name} ->
-                  case code:which(bcrypt) of
+                  case code:which(erlbcrypt) of
                       Filename when is_list(Filename) ->
                           filename:join(
                             [filename:dirname(Filename), "../priv"]);
